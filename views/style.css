@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url("pattern.jpg");
+}
+
+form {
+    border: 3px solid #f1f1f1;
+}
+
+input[type=text],
+input[type=password] {
+    width: -webkit-fill-available;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #1a36a5;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.imgcontainer {
+    text-align: center;
+    margin: 24px 0 12px 0;
+}
+
+img.avatar {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    border-radius: 75%;
+}
+
+.container {
+    padding-left: 500px;
+    padding-top: 90px;
+    padding-bottom: 500px;
+    padding-right: 500px;
+    resize: none;
+}
+
+#page {
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: fit-content;
+    resize: none;
+    height: 100%;
+}
+
+#mainLoginForm{
+    margin-top: 150px;
+}
+
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        float: none;
+    }
+}
+
+#menu1 {
+    width: 12em;
+    background: #eee;
+    display: block;
+    float: left;
+}
+
+#menu1 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+}
+
+#menu1 li {
+    font: bold 18px/18px arial, helvetica, sans-serif;
+    display: block;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc #888 #555 #bbb;
+    margin: 0;
+    padding: 70px 60px;
+    position: relative;
+}
+
+#menu1 li:hover {
+    color: blue;
+    background: #fff;
+}
+
+#logo {
+    text-align: center;
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+#logo img {
+
+    width: 40%;
+    border-radius: 75%;
+}
+
+#page_content {
+    background-color: #f1f1f1;
+    display: inline-block;
+    margin-left: 1em;
+    height: auto;
+    min-width: 80%;
+    min-height: 50em;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #ccc #888 #555 #bbb;
+}

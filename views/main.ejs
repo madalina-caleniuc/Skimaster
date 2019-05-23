@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div id="logo">
+        <img src="media/logo.png" class="top-logo" />
+    </div>
+    <!-- MENIU VERTICAL -->
+    <div id="menu1">
+        <ul>
+            <a href="">
+                <li>Incarcare Card</li>
+            </a>
+            <a href="">
+                <li>Informatii Card</li>
+            </a>
+            <a href="">
+                <li>Istoric Rapoarte</li>
+            </a>
+            <a href="">
+                <li>Adauga card</li>
+            </a>
+        </ul>
+    </div>
+    <div id="page_content">
+
+        <% if(typeof result == 'object' && result){ %>
+            <table>
+                <% for(var i=0; i < result.length; i++) { %>
+                <tr>
+                    <td><%= result[i].id_client %></td>
+                    <td><%= result[i].nume_client %></td>
+                </tr>
+                <% } %>
+            </table>
+        <% } %>
+
+        <p>test</p>
+    </div>
+
+</body>
+
+</html>
