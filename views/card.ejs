@@ -1,14 +1,14 @@
 <% include body.html %>
 <div id="page_content">
 
-    <% if(typeof result == 'object' && result){ %>
-    <table>
+    <% if (typeof result == 'object' && result){ %>
+    <table id="data_menu">
         <% for(var i=0; i < result.length; i++) { %>
         <tr>
-            <td>ID: <%= result[i].id_card %></td>
-            <td>ID Client: <%= result[i].id_client %></td>
-            <td>Valabil de la: <%= result[i].start_valabilitate %> pana la: <%= result[i].sfarsit_valabilitate %></td>
-            <td>Card VIP: <%= result[i].vip %></td>
+            <td>ID card: <%= result[i].id_card %></td>
+            <td>Nume: <%= result[i].nume_client %></td>
+            <td>Valabil de la: <b><%= result[i].data_emitere %></b> pana la: <b><%= result[i].data_expirare %></b></td>
+            <% if (result[i].vip == 1) { %> <td class="vip"> card VIP </td> <% } %>            
         </tr>
         <% } %>
     </table>

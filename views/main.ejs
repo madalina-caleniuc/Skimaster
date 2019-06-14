@@ -2,11 +2,13 @@
 <div id="page_content">
 
     <% if(typeof result == 'object' && result){ %>
-    <table>
+    <table id="data_menu">
         <% for(var i=0; i < result.length; i++) { %>
         <tr>
             <td><%= result[i].id_client %></td>
-            <td><%= result[i].nume_client %></td>
+            <% if (result[i].vip == 1) { %><td class="vip"><%= result[i].nume_client %></td>
+            <% } else { %> <td><%= result[i].nume_client %></td> <% } %>
+            <td><%= result[i].nr_telefon %></td>
         </tr>
         <% } %>
     </table>
