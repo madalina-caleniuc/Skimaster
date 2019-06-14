@@ -5,8 +5,10 @@
     <table>
         <% for(var i=0; i < result.length; i++) { %>
         <tr>
-            <td><%= result[i].id_client %></td>
-            <td><%= result[i].nume_client %></td>
+            <td>ID: <%= result[i].id_card %></td>
+            <td>ID Client: <%= result[i].id_client %></td>
+            <td>Valabil de la: <%= result[i].start_valabilitate %> pana la: <%= result[i].sfarsit_valabilitate %></td>
+            <td>Card VIP: <%= result[i].vip %></td>
         </tr>
         <% } %>
     </table>

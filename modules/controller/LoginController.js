@@ -12,7 +12,7 @@ module.exports = {
             /// add custom login credential check logic
 
             // console.log(req);
-            console.log("mata");
+            console.log("logare reusita");
             console.log(req.body.username)
             console.log(req.body.password)
 

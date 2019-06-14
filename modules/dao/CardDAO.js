@@ -1,18 +1,19 @@
-var connection = require('./util/Connection');
+var connectionUtil = require('../util/connectionUtil');
 
 module.exports = {
 
-    getAllCards: function () {
+    getAllCards: function (callBack) {
+        var connection = connectionUtil.getConnection();
 
         connection.connect(function (err) {
-            if (err) throw err;
-            con.query("SELECT * FROM carduri", function (err, result, fields) {
-                if (err) throw err;
-                console.log(result[0].name);
 
-                nam = result[0].name;
-                addr = result[0].address;
-                console.log('nam: ' + nam);
+            if (err) throw err;
+            connection.query("SELECT * FROM carduri", function (err, result, fields) {
+                if (err) throw err;
+
+                connection.end();
+                
+                callBack(result)
             });
         });
 
