@@ -6,6 +6,7 @@ module.exports = {
         var connection = connectionUtil.getConnection();
 
         connection.connect(function (err) {
+            
             if (err) throw err;
 
             connection.query("SELECT * FROM clienti", function (err, result, fields) {

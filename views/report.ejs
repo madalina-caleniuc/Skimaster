@@ -1,0 +1,14 @@
+<% include body.html %>
+<div id="page_content">
+
+    <% if(typeof result == 'object' && result){ 
+         for(var i=0; i < result.length; i++) { %>
+
+                <button id="reportButton"><%= result[i].nume_raport %></button>
+
+                <% }
+        } %>
+
+    <p>test</p>
+</div>
+<% include body_end.html %>

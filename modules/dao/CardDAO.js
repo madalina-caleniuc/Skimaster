@@ -8,7 +8,7 @@ module.exports = {
         connection.connect(function (err) {
 
             if (err) throw err;
-            connection.query("SELECT c.id_card, cl.nume_client, DATE_FORMAT(c.data_emitere, \"%d %M %Y\") as data_emitere, DATE_FORMAT(c.data_expirare, \"%d %M %Y\") as data_expirare, cl.vip FROM skimaster.carduri c JOIN clienti cl on c.id_client=cl.id_client",
+            connection.query("SELECT c.id_card, cl.nume_client, DATE_FORMAT(c.data_emitere, \"%d %M %Y\") as data_emitere, DATE_FORMAT(c.data_expirare, \"%d %M %Y\") as data_expirare, cl.vip, b.nr_puncte_disponibile FROM carduri c JOIN clienti cl on c.id_client=cl.id_client LEFT JOIN balans_carduri b on c.id_card=b.id_card",
             function (err, result, fields) {
                 if (err) throw err;
 

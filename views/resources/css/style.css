@@ -17,7 +17,7 @@ input[type=password] {
     box-sizing: border-box;
 }
 
-button {
+#loginButton {
     background-color: #1a36a5;
     color: white;
     padding: 14px 20px;
@@ -27,7 +27,7 @@ button {
     width: 100%;
 }
 
-button:hover {
+#loginButton:hover {
     opacity: 0.8;
 }
 
@@ -139,4 +139,16 @@ span.psw {
 td.vip {
     background-color: #30d852;
     color: #fff;
+}
+
+#reportButton {
+    width: 10em;
+    height: 5em;
+    background-color: #1a36a5;
+    color: white;
+    padding: 1em 1em;
+    margin-top: 2em;
+    margin-left: 2em;
+    border: none;
+    cursor: pointer;
 }

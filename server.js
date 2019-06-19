@@ -9,12 +9,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var loginPage = require('./modules/controller/LoginController');
 var mainPage = require('./modules/controller/MainController');
 var cardPage = require('./modules/controller/CardController');
-var resetPassPage = require('./modules/controller/ResetPassController');
+var reportPage = require('./modules/controller/ReportController');
 
 loginPage.bindView(app);
 mainPage.bindView(app);
 cardPage.bindView(app);
-resetPassPage.bindView(app);
+reportPage.bindView(app);
 
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!')
