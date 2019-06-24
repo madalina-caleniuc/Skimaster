@@ -2,26 +2,33 @@ module.exports = {
 
     bindView: function (app) {
         app.get('/', function (req, res) {
-            
-            // logica
+
+            preparePage(function () {
+
+                res.redirect('login');
+
+            });
+
+        });
+
+        app.get('/login', function (req, res) {
+
+            // preparePage(function(){
 
             res.render('login');
-        })
 
-        app.post('/', function (req, res) {
-            /// add custom login credential check logic
+            // });
 
-            // console.log(req);
-            console.log("logare reusita");
-            console.log(req.body.username)
-            console.log(req.body.password)
-
-            res.redirect('/main');
-        })
+        });
 
     }
-
 };
 
+var preparePage = function (callback) {
 
+    // var login = loginDAO.getCredentials(function(result){
 
+    //     callback(result);
+    // });
+
+}
