@@ -1,16 +1,24 @@
-var passwordDAO = require('../dao/PasswordDAO');
+var clientDAO = require('../dao/ClientDAO');
+var session = require('express-session');
 
 module.exports = {
 
     bindView: function (app) {
-        app.get('/reset_pass', function (req, res) {
-            
-            preparePage(function(result){
+        app.use(session({
+            secret: 'secret',
+            resave: true,
+            saveUninitialized: true
+        }));
 
-                res.render('reset_pass', {'result' : result});
+        app.get('/main', function (req, res) {
+
+            preparePage(function (result) {
+                if (req.session.loggedin)
+                    res.render('main', { 'result': result });
+                else res.render('login');
 
             });
-            
+
         })
     }
 
@@ -18,10 +26,9 @@ module.exports = {
 
 var preparePage = function (callback) {
 
-    // let username = "admin";
-    // var pass = passwordDAO.checkCredentials(function(username,result){
+    var clients = clientDAO.getAllClients(function (result) {
 
-    //     callback(result);
-    // });
-    
+        callback(result);
+    });
+
 }

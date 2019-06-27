@@ -18,14 +18,16 @@ var mainPage = require('./modules/controller/MainController');
 var cardPage = require('./modules/controller/CardController');
 var reportPage = require('./modules/controller/ReportController');
 var auth = require('./modules/controller/AuthController');
-
+//var main1Page = require('./modules/controller/Main1Controller');
 
 loginPage.bindView(app);
 mainPage.bindView(app);
 cardPage.bindView(app);
 reportPage.bindView(app);
 auth.bindView(app);
+//main1Page.bindView(app);
+
 
 app.listen(3000, function () {
-  console.log('Example app listening on port 3000!')
+  console.log('App listening on port 3000!')
 })

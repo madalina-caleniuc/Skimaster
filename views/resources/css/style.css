@@ -1,10 +1,6 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-image: url("pattern.jpg");
-}
-
-form {
-    border: 3px solid #f1f1f1;
+    font-family: Arial, bold, Helvetica, sans-serif;
+    background-image: url("munte.jpg");
 }
 
 input[type=text],
@@ -15,6 +11,7 @@ input[type=password] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+    
 }
 
 #loginButton {
@@ -26,6 +23,7 @@ input[type=password] {
     cursor: pointer;
     width: 100%;
 }
+
 
 #loginButton:hover {
     opacity: 0.8;
@@ -58,6 +56,7 @@ img.avatar {
     width: fit-content;
     resize: none;
     height: 100%;
+    
 }
 
 #mainLoginForm{
@@ -66,10 +65,11 @@ img.avatar {
 
 span.psw {
     float: right;
-    padding-top: 16px;
+    padding-top: 16px
 }
 
-@media screen and (max-width: 300px) {
+
+@media screen and (max-width: 200px) {
     span.psw {
         display: block;
         float: none;
@@ -77,7 +77,6 @@ span.psw {
 }
 
 #menu1 {
-    width: 12em;
     background: #eee;
     display: block;
     float: left;
@@ -89,22 +88,33 @@ span.psw {
     padding: 0;
     top: 0;
     left: 0;
+
+}
+.underbar{
+    width: 0;
+    height: 5px;
+    background: rgba(100,100,200,0);
+    //left: -50px;
+    top: 20px;
+    position: absolute;
+    -webkit-transition: 0.5s ease;
 }
 
 #menu1 li {
     font: bold 18px/18px arial, helvetica, sans-serif;
+    height: 2em;
     display: block;
-    border-width: 1px;
     border-style: solid;
-    border-color: #ccc #888 #555 #bbb;
+    border-color: #ccc #888 #888 #bbb;
     margin: 0;
-    padding: 70px 60px;
+    padding: 30px 30px;
     position: relative;
+    
 }
 
 #menu1 li:hover {
     color: blue;
-    background: #fff;
+    background: snow;
 }
 
 #logo {
@@ -124,16 +134,18 @@ span.psw {
     display: inline-block;
     margin-left: 1em;
     height: auto;
-    min-width: 80%;
+    min-width: 70%;
     min-height: 50em;
-    border-width: 1px;
+    border-width: px;
     border-style: solid;
-    border-color: #ccc #888 #555 #bbb;
-}
+    border-color: #ccc rgb(136, 136, 136) #555 #bbb;      
+      }
+    
 
 #data_menu td {
-    padding: 5px;
+    padding: 10px;
     border: 1px solid black;
+
 }
 
 td.vip {
