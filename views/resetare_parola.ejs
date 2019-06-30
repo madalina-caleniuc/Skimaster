@@ -1,0 +1,19 @@
+<% include body.html %>
+
+    <div id="page_content">
+        <h1>Resetare parola</h1>
+
+        <form action="reset" method="POST">
+
+            <label for="username"><b>Nume utilizator</b></label><br>
+            <input type="text" name="username" placeholder="Introduceti username" class="reset_input" required />
+            <br>
+            <label for="password"><b>Parola noua</b></label><br>
+            <input type="password" name="password" placeholder="Introduceti parola noua" class="reset_input" required>
+
+            <br>
+            <button>Schimba parola</button>
+        </form>
+    </div>
+
+    <% include body_end.html %>

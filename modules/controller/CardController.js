@@ -3,19 +3,19 @@ var session = require('express-session');
 
 module.exports = {
 
-    bindView: function (app) {
+    bindView: function(app) {
         app.use(session({
             secret: 'secret',
             resave: true,
             saveUninitialized: true
         }));
 
-        app.get('/card', function (req, res) {
+        app.get('/card', function(req, res) {
 
-            preparePage(function (result) {
+            preparePage(function(result) {
                 if (req.session.loggedin)
                     res.render('card', { 'result': result });
-                else res.render('login');
+                else res.redirect('/login');
             });
 
         })
@@ -23,9 +23,9 @@ module.exports = {
 
 };
 
-var preparePage = function (callback) {
+var preparePage = function(callback) {
 
-    var cards = cardDAO.getAllCards(function (result) {
+    var cards = cardDAO.getAllCards(function(result) {
 
         callback(result);
     });

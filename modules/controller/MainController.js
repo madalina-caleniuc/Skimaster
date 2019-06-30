@@ -3,19 +3,19 @@ var session = require('express-session');
 
 module.exports = {
 
-    bindView: function (app) {
+    bindView: function(app) {
         app.use(session({
             secret: 'secret',
             resave: true,
             saveUninitialized: true
         }));
 
-        app.get('/main', function (req, res) {
+        app.get('/main', function(req, res) {
 
-            preparePage(function (result) {
+            preparePage(function(result) {
                 if (req.session.loggedin)
                     res.render('main', { 'result': result });
-                else res.render('login');
+                else res.redirect('/login');
 
             });
 
@@ -24,9 +24,9 @@ module.exports = {
 
 };
 
-var preparePage = function (callback) {
+var preparePage = function(callback) {
 
-    var clients = clientDAO.getAllClients(function (result) {
+    var clients = clientDAO.getAllClients(function(result) {
 
         callback(result);
     });

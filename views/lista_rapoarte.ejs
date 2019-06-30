@@ -1,21 +1,18 @@
 <% include body.html %>
-<div id="page_content">
+    <div id="page_content">
+        <h1>Rapoarte</h1>
 
-
-    <% if(typeof result == 'object' && result){ 
+        <% if(typeof result == 'object' && result){ 
 
          for(var i=0; i < result.length; i++) { %>
-    <form action="exec_raport" method="GET">
-        <input type="hidden" name="id_raport" alt="id_raport" value="<%= result[i].id_raport %>"></input>
-        <button
-            id="reportButton"><%= result[i].nume_raport %></button>
+            <form action="raport" method="GET">
+                <input type="hidden" name="id_raport" alt="id_raport" value="<%= result[i].id_raport %>"></input>
+                <button id="reportButton"><%= result[i].nume_raport %></button>
 
-    </form>
-    <% }
+            </form>
+            <% }
         } %>
 
 
-
-    <p>test</p>
-</div>
-<% include body_end.html %>
+    </div>
+    <% include body_end.html %>

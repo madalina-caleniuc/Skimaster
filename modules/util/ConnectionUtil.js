@@ -2,7 +2,7 @@ var mysql = require('mysql');
 
 module.exports = {
 
-    connection: "mata",
+    connection: "ski",
 
     getConnection: function () {
 

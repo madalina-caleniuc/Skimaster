@@ -1,20 +1,25 @@
 <% include body.html %>
-<div id="page_content">
+    <div id="page_content">
+        <h1>Carduri active</h1>
 
-    <% if (typeof result == 'object' && result){ %>
-    <table id="data_menu">
-        <% for(var i=0; i < result.length; i++) { %>
-        <tr>
-            <td>Card: <%= result[i].id_card %></td>
-            <td>Puncte: <b><%= result[i].nr_puncte_disponibile %></b></td>
-            <td>Nume: <%= result[i].nume_client %></td>
-            <td>Valabil de la: <b><%= result[i].data_emitere %></b> pana la: <b><%= result[i].data_expirare %></b></td>
-            <% if (result[i].vip == 1) { %> <td class="vip"> card VIP </td> <% } %>            
-        </tr>
-        <% } %>
-    </table>
-    <% } %>
-
-    <p>test</p>
-</div>
-<% include body_end.html %>
+        <% if (typeof result == 'object' && result){ %>
+            <table id="data_menu">
+                <% for(var i=0; i < result.length; i++) { %>
+                    <tr>
+                        <td>Card:
+                            <%= result[i].id_card %>
+                        </td>
+                        <td>Puncte: <b><%= result[i].nr_puncte_disponibile %></b></td>
+                        <td>Nume:
+                            <%= result[i].nume_client %>
+                        </td>
+                        <td>Valabil de la: <b><%= result[i].data_emitere %></b> pana la: <b><%= result[i].data_expirare %></b></td>
+                        <% if (result[i].vip == 1) { %>
+                            <td class="vip"> card VIP </td>
+                            <% } %>
+                    </tr>
+                    <% } %>
+            </table>
+            <% } %>
+    </div>
+    <% include body_end.html %>

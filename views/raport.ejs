@@ -1,16 +1,29 @@
 <% include body.html %>
-<div id="page_content">
 
-    <% if(typeof result_final == 'object' && result_final){ 
-         for(var i=0; i < result_final.length; i++) { %>
+    <div id="page_content">
+        <h1>Raport</h1>
 
-    <p>123</p> ala bala portocala
+        <% if (typeof result_final == 'object' && result_final){ %>
 
-    } %>
+            <table id="data_menu">
+
+                <%for (var result in result_final){%>
+                    <tr>
+                        <%for (var subresult in result_final[result]){%>
+
+                            <td>
+                                <%= subresult%>:
+                                    <%= result_final[result][subresult] %>
+                            </td>
+
+                            <%}%>
+                    </tr>
+                    <%}%>
+            </table>
 
 
+            <% } %>
 
+    </div>
 
-    <p>test</p>
-</div>
-<% include body_end.html %>
+    <% include body_end.html %>

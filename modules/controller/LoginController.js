@@ -1,17 +1,12 @@
 module.exports = {
 
-    bindView: function (app) {
-        app.get('/', function (req, res) {
-
-            preparePage(function () {
-
-                res.redirect('login');
-
-            });
+    bindView: function(app) {
+        app.get('/', function(req, res) {
+            res.redirect('/login');
 
         });
 
-        app.get('/login', function (req, res) {
+        app.get('/login', function(req, res) {
 
             // preparePage(function(){
 
@@ -24,7 +19,7 @@ module.exports = {
     }
 };
 
-var preparePage = function (callback) {
+var preparePage = function(callback) {
 
     // var login = loginDAO.getCredentials(function(result){
 
